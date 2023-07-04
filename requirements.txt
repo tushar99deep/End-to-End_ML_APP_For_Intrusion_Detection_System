@@ -1,0 +1,9 @@
+Flask
+pandas
+numpy
+seaborn
+scikit-learn
+matplotlib
+requests
+cassandra-driver
+-e .

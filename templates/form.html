@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: #efe5e5;
+            color: #020000;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip i:hover + .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>ML Algorithm For Intrusion Detection System</h1>
+    <h2>Enter the data in the below field to predict the type of Attack</h2>
+    <h3 style="font-size: 11px; color: red; " >[Note - Move cursor on i button to view info about each field]</h3>
+    <form method="POST" action="/predict">
+        <div>
+            <label for="Duration">Duration:</label>
+            <div class="tooltip">
+                <input type="number" id="Duration" name="Duration" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Duration of the connection is seconds</span>
+                
+            </div>
+        </div>
+
+        <div>
+            <label for="Count">Count:</label>
+            <div class="tooltip">
+                <input type="number" id="Count" name="Count" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the count value.</span>
+            </div>
+        </div>
+
+        <div>
+            <label for="DestinationBytes">DestinationBytes:</label>
+            <div class="tooltip">
+                <input type="number" id="DestinationBytes" name="DestinationBytes" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the DestinationBytes value.</span>
+            </div>
+        </div>
+
+
+        <div>
+            <label for="DiffSrvRate">DiffSrvRate:</label>
+            <div class="tooltip">
+                <input type="number" id="DiffSrvRate" name="DiffSrvRate" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the DiffSrvRate value.</span>
+            </div>
+        </div>
+
+        <div>
+            <label for="DstHostCount">DstHostCount:</label>
+            <div class="tooltip">
+                <input type="number" id="DstHostCount" name="DstHostCount" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the DstHostCount value.</span>
+            </div>
+        </div>
+
+        <div>
+            <label for="DstHostDiffSrvRate">DstHostDiffSrvRate:</label>
+            <div class="tooltip">
+                <input type="number" id="DstHostDiffSrvRate" name="DstHostDiffSrvRate" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the DstHostDiffSrvRate value.</span>
+            </div>
+        </div>
+
+        <div>
+            <label for="DstHostRerrorRate">DstHostRerrorRate:</label>
+            <div class="tooltip">
+                <input type="number" id="DstHostRerrorRate" name="DstHostRerrorRate" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the DstHostRerrorRate value.</span>
+            </div>
+        </div>
+
+        <div>
+            <label for="DstHostSameSrcPortRate">DstHostSameSrcPortRate:</label>
+            <div class="tooltip">
+                <input type="number" id="DstHostSameSrcPortRate" name="DstHostSameSrcPortRate" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the DstHostSameSrcPortRate value.</span>
+            </div>
+        </div>
+
+        <div>
+            <label for="DstHostSameSrvRate">DstHostSameSrvRate:</label>
+            <div class="tooltip">
+                <input type="number" id="DstHostSameSrvRate" name="DstHostSameSrvRate" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the DstHostSameSrvRate value.</span>
+            </div>
+        </div>
+
+        <div>
+            <label for="DstHostSerrorRate">DstHostSerrorRate:</label>
+            <div class="tooltip">
+                <input type="number" id="DstHostSerrorRate" name="DstHostSerrorRate" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the DstHostSerrorRate value.</span>
+            </div>
+        </div>
+
+
+
+        <div>
+            <label for="DstHostSrvCount">DstHostSrvCount:</label>
+            <div class="tooltip">
+                <input type="number" id="DstHostSrvCount" name="DstHostSrvCount" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the DstHostSrvCount value.</span>
+            </div>
+        </div>
+
+        <div>
+            <label for="DstHostSrvDiffHostRate">DstHostSrvDiffHostRate:</label>
+            <div class="tooltip">
+                <input type="number" id="DstHostSrvDiffHostRate" name="DstHostSrvDiffHostRate" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the DstHostSrvDiffHostRate value.</span>
+            </div>
+        </div>
+
+
+        <div>
+            <label for="DstHostSrvRerrorRate">DstHostSrvRerrorRate:</label>
+            <div class="tooltip">
+                <input type="number" id="DstHostSrvRerrorRate" name="DstHostSrvRerrorRate" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the DstHostSrvRerrorRate value.</span>
+            </div>
+        </div>
+
+
+        <div>
+            <label for="DstHostSrvSerrorRate">DstHostSrvSerrorRate:</label>
+            <div class="tooltip">
+                <input type="number" id="DstHostSrvSerrorRate" name="DstHostSrvSerrorRate" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the DstHostSrvRerrorRate value.</span>
+            </div>
+        </div>
+
+
+        <div>
+            <label for="DstHostSrvSerrorRate">DstHostSrvSerrorRate:</label>
+            <div class="tooltip">
+                <input type="number" id="DstHostSrvSerrorRate" name="DstHostSrvSerrorRate" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the DstHostSrvRerrorRate value.</span>
+            </div>
+        </div>
+
+
+        <div>
+            <label for="Flag">Flag:</label>
+            <div class="tooltip">
+                <input type="text" id="Flag" name="Flag" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the Flag value.</span>
+            </div>
+        </div>
+
+        <div>
+            <label for="Hot">Hot:</label>
+            <div class="tooltip">
+                <input type="number" id="Hot" name="Hot" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the Hot value.</span>
+            </div>
+        </div>
+
+
+        <div>
+            <label for="IsGuestLogin">IsGuestLogin:</label>
+            <div class="tooltip">
+                <input type="number" id="IsGuestLogin" name="IsGuestLogin" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the IsGuestLogin value.</span>
+            </div>
+        </div>
+
+
+        <div>
+            <label for="IsHostLogin">IsHostLogin:</label>
+            <div class="tooltip">
+                <input type="number" id="IsHostLogin" name="IsHostLogin" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the IsHostLogin value.</span>
+            </div>
+        </div>
+
+
+
+        <div>
+            <label for="Land">Land:</label>
+            <div class="tooltip">
+                <input type="number" id="Land" name="Land" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter land value</span>
+            </div>
+        </div>
+
+
+        <div>
+            <label for="LoggedIn">LoggedIn:</label>
+            <div class="tooltip">
+                <input type="number" id="LoggedIn" name="LoggedIn" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the LoggedIn value.</span>
+            </div>
+        </div>
+
+
+        <div>
+            <label for="NumAccessFiles">NumAccessFiles:</label>
+            <div class="tooltip">
+                <input type="number" id="NumAccessFiles" name="NumAccessFiles" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the NumAccessFiles value.</span>
+            </div>
+        </div>
+
+
+        <div>
+            <label for="NumCompromised">NumCompromised:</label>
+            <div class="tooltip">
+                <input type="number" id="NumCompromised" name="NumCompromised" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the NumCompromised value.</span>
+            </div>
+        </div>
+
+        <div>
+            <label for="NumFailedLogins">NumFailedLogins:</label>
+            <div class="tooltip">
+                <input type="number" id="NumFailedLogins" name="NumFailedLogins" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the NumFailedLogins value.</span>
+            </div>
+        </div>
+
+
+        <div>
+            <label for="NumFileCreations">NumFileCreations:</label>
+            <div class="tooltip">
+                <input type="number" id="NumFileCreations" name="NumFileCreations" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the NumFileCreations value.</span>
+            </div>
+        </div>
+
+
+        <div>
+            <label for="NumOutboundCmds">NumOutboundCmds:</label>
+            <div class="tooltip">
+                <input type="number" id="NumOutboundCmds" name="NumOutboundCmds" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the NumOutboundCmds value.</span>
+            </div>
+        </div>
+
+
+        <div>
+            <label for="NumRoot">NumRoot:</label>
+            <div class="tooltip">
+                <input type="number" id="NumRoot" name="NumRoot" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the NumRoot value.</span>
+            </div>
+        </div>
+
+        <div>
+            <label for="NumShells">NumShells:</label>
+            <div class="tooltip">
+                <input type="number" id="NumShells" name="NumShells" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the NumShells value.</span>
+            </div>
+        </div>
+
+        <div>
+            <label for="ProtocolType">ProtocolType:</label>
+            <div class="tooltip">
+                <input type="text" id="ProtocolType" name="ProtocolType" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the ProtocolType value.</span>
+            </div>
+        </div>
+
+        <div>
+            <label for="RerrorRate">RerrorRate:</label>
+            <div class="tooltip">
+                <input type="number" id="RerrorRate" name="RerrorRate" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the RerrorRate value.</span>
+            </div>
+        </div>
+
+
+
+        <div>
+            <label for="RootShell">RootShell:</label>
+            <div class="tooltip">
+                <input type="number" id="RootShell" name="RootShell" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the RootShell value.</span>
+            </div>
+        </div>
+
+        <div>
+            <label for="SameSrvRate">SameSrvRate:</label>
+            <div class="tooltip">
+                <input type="number" id="SameSrvRate" name="SameSrvRate" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the SameSrvRate value.</span>
+            </div>
+        </div>
+
+
+        <div>
+            <label for="SerrorRate">SerrorRate:</label>
+            <div class="tooltip">
+                <input type="number" id="SerrorRate" name="SerrorRate" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the SerrorRate value.</span>
+            </div>
+        </div>
+
+
+        <div>
+            <label for="Service">Service:</label>
+            <div class="tooltip">
+                <input type="text" id="Service" name="Service" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the Service value.</span>
+            </div>
+        </div>
+
+        <div>
+            <label for="SourceBytes">SourceBytes:</label>
+            <div class="tooltip">
+                <input type="number" id="SourceBytes" name="SourceBytes" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the SourceBytes value.</span>
+            </div>
+        </div>
+
+
+        <div>
+            <label for="SrvCount">SrvCount:</label>
+            <div class="tooltip">
+                <input type="number" id="SrvCount" name="SrvCount" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the SrvCount value.</span>
+            </div>
+        </div>
+
+
+        <div>
+            <label for="SrvDiffHostRate">SrvDiffHostRate:</label>
+            <div class="tooltip">
+                <input type="number" id="SrvDiffHostRate" name="SrvDiffHostRate" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the SrvDiffHostRate value.</span>
+            </div>
+        </div>
+
+
+        <div>
+            <label for="SrvRerrorRate">SrvRerrorRate:</label>
+            <div class="tooltip">
+                <input type="number" id="SrvRerrorRate" name="SrvRerrorRate" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the SrvRerrorRate value.</span>
+            </div>
+        </div>
+
+
+        <div>
+            <label for="SrvSerrorRate">SrvSerrorRate:</label>
+            <div class="tooltip">
+                <input type="number" id="SrvSerrorRate" name="SrvSerrorRate" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the SrvSerrorRate value.</span>
+            </div>
+        </div>
+
+
+        <div>
+            <label for="SuAttempted">SuAttempted:</label>
+            <div class="tooltip">
+                <input type="number" id="SuAttempted" name="SuAttempted" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the SuAttempted value.</span>
+            </div>
+        </div>
+
+
+        <div>
+            <label for="Urgent">Urgent:</label>
+            <div class="tooltip">
+                <input type="number" id="Urgent" name="Urgent" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the Urgent value.</span>
+            </div>
+        </div>
+
+
+        <div>
+            <label for="WrongFragment">WrongFragment:</label>
+            <div class="tooltip">
+                <input type="number" id="WrongFragment" name="WrongFragment" required>
+                <i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">Enter the WrongFragment value.</span>
+            </div>
+        </div>
+
+        
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
